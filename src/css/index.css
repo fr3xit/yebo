@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h1, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.page {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  max-width: 1130px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.desc {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 60px 10px;
+  text-align: center;
+}
+.desc__icon {
+  margin-bottom: 30px;
+}
+.desc__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.desc__text {
+  color: #848789;
+  text-align: left;
+}
+
+.header-aut {
+  position: absolute;
+}
+
+.intro-aut {
+  min-height: 100vh;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.generation {
+  background-color: #f7f7f7;
+  padding: 60px 0;
+}
+.generation__text {
+  text-align: center;
+}/*# sourceMappingURL=index.css.map */

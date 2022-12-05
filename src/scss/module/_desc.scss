@@ -1,0 +1,23 @@
+.desc {
+	max-width: 1080px;
+	margin: 0 auto;
+	padding: 60px 10px;
+
+	text-align: center;
+
+	&__icon {
+		margin-bottom: 30px;
+	}
+
+	&__title {
+		margin-bottom: 20px;
+
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		color: #848789;
+		text-align: left;
+	}
+}
