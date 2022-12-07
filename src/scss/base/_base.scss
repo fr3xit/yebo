@@ -3,6 +3,7 @@
 	overflow: hidden;
 	min-height: 100vh;
 
+	color: $color-grey;
 	font-family: 'Lato', sans-serif;
 }
 
@@ -10,4 +11,12 @@
 	max-width: calc($container + 30px);
 	padding: 0 15px;
 	margin: 0 auto;
+}
+
+img {
+	// fix отступа
+	vertical-align: top;
+
+	max-width: 100%;
+	height: auto;
 }

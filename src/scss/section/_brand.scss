@@ -1,0 +1,110 @@
+.bike {
+	@include flex;
+	// min-height: 600px;
+
+	background: {
+		repeat: no-repeat;
+		position: calc(100% / 3 * 2 / 2) 50%, 0 0;
+		size: auto, calc(100% / 3 * 2) 100%;
+	}
+
+	&--left {
+		background-position: right;
+	}
+
+	&--right {
+		justify-content: end;
+	}
+
+	&--three {
+		justify-content: center;
+		background: {
+			// size: calc(100% / 3) 100%;
+			// position: center;
+		}
+	}
+
+	&--bg_one {
+		background: {
+			image: url("../img/bike-1/logo.png"), url("../img/bike-1/bike-1.jpg");
+			position: calc(100% / 3 * 2 / 2) 50%, 0 0;
+		}
+	}
+
+	&--bg_two {
+		background: {
+			image: url("../img/bike-2/logo.png"), url("../img/bike-2/bike-1.jpg");
+			position: calc(100% / 3 * 2) 50%, top right;
+		}
+	}
+
+	&--bg_three {
+		background: {
+			image: url("../img/bike-3/logo.png"), url("../img/bike-3/bike-1.jpg"), url("../img/bike-3/bike-3.jpg");
+			position: calc(100% / 3 / 3) 50%, left top, right top;
+			size: auto, calc(100% / 3) 100%, calc(100% / 3) 100%;
+		}
+	}
+
+	&__content {
+		@include center_f;
+		flex-direction: column;
+		flex: 0 1 calc(100% / 3);
+	}
+
+	&__desc {
+		@include center_f;
+		flex-direction: column;
+		align-content: center;
+		flex: 1 1 calc(100% / 3 * 2);
+		padding: 60px;
+	}
+
+	&__img-box {
+		flex: 1 1 calc(100% / 3);
+		width: 100%;
+	}
+
+	&__link {
+		position: relative;
+
+		display: block;
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__img-content {
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 10;
+
+		@include center_f;
+		flex-direction: column;
+		gap: 5px;
+		min-width: 100%;
+		min-height: 100%;
+		// padding-top: 50px;
+
+		font-size: 1.2em;
+		font-weight: 700;
+		background-color: $color-accent_alpha;
+
+		&:hover {
+			opacity: 1;
+			transition: all 0.3s linear;
+		}
+	}
+
+	&__img-content-title {
+		color: #fff;
+		opacity: 1;
+	}
+}

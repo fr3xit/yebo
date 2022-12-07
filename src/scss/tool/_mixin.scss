@@ -1,0 +1,16 @@
+// Flex
+@mixin flex {
+	display: flex;
+	gap: 30px;
+
+	justify-content: space-between;
+}
+
+// Center
+
+@mixin center_f {
+	@include flex;
+	gap: 0;
+	justify-content: center;
+	align-items: center;
+}

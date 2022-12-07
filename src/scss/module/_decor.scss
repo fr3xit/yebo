@@ -1,0 +1,33 @@
+.decor {
+	&--triangle::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 100;
+		margin: 0 auto;
+
+		display: block;
+		width: 30px;
+		height: 30px;
+
+		content: "";
+		background-color: #fff;
+		// background-color: red;
+		transform: translateY(-50%) rotate(135deg);
+	}
+
+	&--line::after {
+		display: block;
+		width: 60px;
+		height: 2px;
+
+		margin: 50px auto;
+		margin-bottom: 20px;
+
+		content: "";
+		border-radius: 3px;
+		background-color: $color-bg;
+	}
+}

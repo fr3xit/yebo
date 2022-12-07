@@ -1,7 +1,6 @@
 .desc {
 	max-width: 1080px;
 	margin: 0 auto;
-	padding: 60px 10px;
 
 	text-align: center;
 
@@ -14,10 +13,10 @@
 
 		font-weight: 700;
 		text-transform: uppercase;
+		color: $color-black;
 	}
 
 	&__text {
-		color: #848789;
 		text-align: left;
 	}
 }

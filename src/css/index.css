@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h1, p {
   position: relative;
   overflow: hidden;
   min-height: 100vh;
+  color: #848789;
   font-family: "Lato", sans-serif;
 }
 
@@ -28,10 +29,15 @@ h1, h2, h3, h4, h5, h1, p {
   margin: 0 auto;
 }
 
+img {
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+}
+
 .desc {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 60px 10px;
   text-align: center;
 }
 .desc__icon {
@@ -41,10 +47,36 @@ h1, h2, h3, h4, h5, h1, p {
   margin-bottom: 20px;
   font-weight: 700;
   text-transform: uppercase;
+  color: #353738;
 }
 .desc__text {
-  color: #848789;
   text-align: left;
+}
+
+.decor--triangle::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  margin: 0 auto;
+  display: block;
+  width: 30px;
+  height: 30px;
+  content: "";
+  background-color: #fff;
+  transform: translateY(-50%) rotate(135deg);
+}
+.decor--line::after {
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin: 50px auto;
+  margin-bottom: 20px;
+  content: "";
+  border-radius: 3px;
+  background-color: #d7d7d7;
 }
 
 .header-aut {
@@ -52,6 +84,7 @@ h1, h2, h3, h4, h5, h1, p {
 }
 
 .intro-aut {
+  display: none;
   min-height: 100vh;
   background-image: url(../img/bg.jpg);
   background-repeat: no-repeat;
@@ -60,9 +93,106 @@ h1, h2, h3, h4, h5, h1, p {
 }
 
 .generation {
-  background-color: #f7f7f7;
+  background-color: #d7d7d7;
   padding: 60px 0;
 }
 .generation__text {
   text-align: center;
+}
+
+.bike {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  background-position: 33.3333333333% 50%, 0 0;
+  background-size: auto, 66.6666666667% 100%;
+}
+.bike--left {
+  background-position: right;
+}
+.bike--right {
+  justify-content: end;
+}
+.bike--three {
+  justify-content: center;
+}
+.bike--bg_one {
+  background-image: url("../img/bike-1/logo.png"), url("../img/bike-1/bike-1.jpg");
+  background-position: 33.3333333333% 50%, 0 0;
+}
+.bike--bg_two {
+  background-image: url("../img/bike-2/logo.png"), url("../img/bike-2/bike-1.jpg");
+  background-position: 66.6666666667% 50%, top right;
+}
+.bike--bg_three {
+  background-image: url("../img/bike-3/logo.png"), url("../img/bike-3/bike-1.jpg"), url("../img/bike-3/bike-3.jpg");
+  background-position: 11.1111111111% 50%, left top, right top;
+  background-size: auto, 33.3333333333% 100%, 33.3333333333% 100%;
+}
+.bike__content {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 0 1 33.3333333333%;
+}
+.bike__desc {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  flex: 1 1 66.6666666667%;
+  padding: 60px;
+}
+.bike__img-box {
+  flex: 1 1 33.3333333333%;
+  width: 100%;
+}
+.bike__link {
+  position: relative;
+  display: block;
+}
+.bike__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.bike__img-content {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 1.2em;
+  font-weight: 700;
+  background-color: rgba(100, 194, 158, 0.5647058824);
+}
+.bike__img-content:hover {
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+.bike__img-content-title {
+  color: #fff;
+  opacity: 1;
 }/*# sourceMappingURL=index.css.map */
