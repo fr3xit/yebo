@@ -1,4 +1,7 @@
 .bike {
+	position: relative;
+
+
 	@include flex;
 	// min-height: 600px;
 
@@ -14,6 +17,15 @@
 		}
 	}
 
+	@media (max-width: 720px) {
+		justify-content: center;
+
+		background: {
+			position: center, 0 0;
+			size: auto, cover;
+		}
+	}
+
 	&--right {
 		justify-content: end;
 		background: {
@@ -26,6 +38,16 @@
 				size: auto, 50% 100%;
 			}
 		}
+
+		@media (max-width: 720px) {
+			justify-content: center;
+
+			background: {
+				color: #fff;
+				position: center, 0 0;
+				size: auto, cover;
+			}
+		}
 	}
 
 	&--left {
@@ -36,6 +58,16 @@
 		@media (max-width: 1000px) {
 			background: {
 				position: 80% 50%, top right;
+			}
+		}
+
+		@media (max-width: 720px) {
+			justify-content: center;
+
+			background: {
+				color: #fff;
+				position: center, 0 0;
+				size: auto, cover;
 			}
 		}
 	}
@@ -53,6 +85,16 @@
 			background: {
 				position: calc(100% / 3 / 3) 50%, left top, left bottom;
 				size: auto, 50% 50%, 50% 50%;
+			}
+		}
+
+		@media (max-width: 720px) {
+			justify-content: center;
+
+			background: {
+				color: #fff;
+				position: center, left top, left bottom;
+				size: auto, 100% 50%, 100% 50%;
 			}
 		}
 	}
@@ -84,6 +126,18 @@
 		@media (max-width: 1000px) {
 			flex: 0 1 50%;
 		}
+
+		@media (max-width: 720px) {
+			justify-content: center;
+			flex: 0 1 80%;
+			margin: 10% 0;
+
+			background: {
+				color: #ffffff95;
+			}
+			border: 1px solid black;
+			border-radius: 30px;
+		}
 	}
 
 	&__desc {
@@ -109,6 +163,11 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+
+		@media (max-width: 720px) {
+			border-bottom-left-radius: 30px;
+			border-bottom-right-radius: 30px;
+		}
 	}
 
 	&__img-content {

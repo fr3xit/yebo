@@ -101,6 +101,7 @@ img {
 }
 
 .bike {
+  position: relative;
   display: flex;
   gap: 30px;
   justify-content: space-between;
@@ -113,6 +114,13 @@ img {
     background-size: auto, 50% 100%;
   }
 }
+@media (max-width: 720px) {
+  .bike {
+    justify-content: center;
+    background-position: center, 0 0;
+    background-size: auto, cover;
+  }
+}
 .bike--right {
   justify-content: end;
   background-position: 33.3333333333% 50%, 0 0;
@@ -123,12 +131,28 @@ img {
     background-size: auto, 50% 100%;
   }
 }
+@media (max-width: 720px) {
+  .bike--right {
+    justify-content: center;
+    background-color: #fff;
+    background-position: center, 0 0;
+    background-size: auto, cover;
+  }
+}
 .bike--left {
   background-position: 66.6666666667% 50%, top right;
 }
 @media (max-width: 1000px) {
   .bike--left {
     background-position: 80% 50%, top right;
+  }
+}
+@media (max-width: 720px) {
+  .bike--left {
+    justify-content: center;
+    background-color: #fff;
+    background-position: center, 0 0;
+    background-size: auto, cover;
   }
 }
 .bike--three {
@@ -141,6 +165,14 @@ img {
     justify-content: right;
     background-position: 11.1111111111% 50%, left top, left bottom;
     background-size: auto, 50% 50%, 50% 50%;
+  }
+}
+@media (max-width: 720px) {
+  .bike--three {
+    justify-content: center;
+    background-color: #fff;
+    background-position: center, left top, left bottom;
+    background-size: auto, 100% 50%, 100% 50%;
   }
 }
 .bike--bg_one {
@@ -165,6 +197,16 @@ img {
 @media (max-width: 1000px) {
   .bike__content {
     flex: 0 1 50%;
+  }
+}
+@media (max-width: 720px) {
+  .bike__content {
+    justify-content: center;
+    flex: 0 1 80%;
+    margin: 10% 0;
+    background-color: rgba(255, 255, 255, 0.5843137255);
+    border: 1px solid black;
+    border-radius: 30px;
   }
 }
 .bike__desc {
@@ -192,6 +234,12 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 720px) {
+  .bike__img {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
 }
 .bike__img-content {
   opacity: 0;
