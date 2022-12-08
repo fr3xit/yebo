@@ -105,51 +105,74 @@ img {
   display: flex;
   gap: 30px;
   justify-content: space-between;
+}
+@media (max-width: 720px) {
+  .bike {
+    justify-content: center;
+  }
+}
+.bike::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   background-repeat: no-repeat;
   background-size: auto, 66.6666666667% 100%;
 }
 @media (max-width: 1000px) {
-  .bike {
+  .bike::before {
     background-position: 33.3333333333% 50%, 0 0;
     background-size: auto, 50% 100%;
   }
 }
 @media (max-width: 720px) {
-  .bike {
-    justify-content: center;
+  .bike::before {
     background-position: center, 0 0;
     background-size: auto, cover;
+    filter: blur(3px);
   }
 }
 .bike--right {
   justify-content: end;
+}
+@media (max-width: 720px) {
+  .bike--right {
+    justify-content: center;
+  }
+}
+.bike--right::before {
   background-position: 33.3333333333% 50%, 0 0;
 }
 @media (max-width: 1000px) {
-  .bike--right {
+  .bike--right::before {
     background-position: 20% 50%, 0 0;
     background-size: auto, 50% 100%;
   }
 }
 @media (max-width: 720px) {
-  .bike--right {
-    justify-content: center;
+  .bike--right::before {
     background-color: #fff;
     background-position: center, 0 0;
     background-size: auto, cover;
   }
 }
-.bike--left {
+@media (max-width: 720px) {
+  .bike--left {
+    justify-content: center;
+  }
+}
+.bike--left::before {
   background-position: 66.6666666667% 50%, top right;
 }
 @media (max-width: 1000px) {
-  .bike--left {
+  .bike--left::before {
     background-position: 80% 50%, top right;
   }
 }
 @media (max-width: 720px) {
-  .bike--left {
-    justify-content: center;
+  .bike--left::before {
     background-color: #fff;
     background-position: center, 0 0;
     background-size: auto, cover;
@@ -157,34 +180,47 @@ img {
 }
 .bike--three {
   justify-content: center;
-  background-position: 11.1111111111% 50%, left top, right top;
-  background-size: auto, 33.3333333333% 100%, 33.3333333333% 100%;
 }
 @media (max-width: 1000px) {
   .bike--three {
     justify-content: right;
+  }
+}
+@media (max-width: 720px) {
+  .bike--three {
+    justify-content: center;
+  }
+}
+.bike--three::before {
+  background-position: 11.1111111111% 50%, left top, right top;
+  background-size: auto, 33.3333333333% 100%, 33.3333333333% 100%;
+}
+@media (max-width: 1000px) {
+  .bike--three::before {
     background-position: 11.1111111111% 50%, left top, left bottom;
     background-size: auto, 50% 50%, 50% 50%;
   }
 }
 @media (max-width: 720px) {
-  .bike--three {
+  .bike--three::before {
     justify-content: center;
     background-color: #fff;
     background-position: center, left top, left bottom;
     background-size: auto, 100% 50%, 100% 50%;
   }
 }
-.bike--bg_one {
+.bike--bg_one::before {
   background-image: url("../img/bike-1/logo.png"), url("../img/bike-1/bike-1.jpg");
 }
-.bike--bg_two {
+.bike--bg_two::before {
   background-image: url("../img/bike-2/logo.png"), url("../img/bike-2/bike-1.jpg");
 }
-.bike--bg_three {
+.bike--bg_three::before {
   background-image: url("../img/bike-3/logo.png"), url("../img/bike-3/bike-1.jpg"), url("../img/bike-3/bike-3.jpg");
 }
 .bike__content {
+  position: relative;
+  z-index: 10;
   display: flex;
   gap: 30px;
   justify-content: space-between;
@@ -266,6 +302,12 @@ img {
 .bike__img-content:hover {
   opacity: 1;
   transition: all 0.3s linear;
+}
+@media (max-width: 720px) {
+  .bike__img-content {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
 }
 .bike__img-content-title {
   color: #fff;

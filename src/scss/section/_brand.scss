@@ -1,117 +1,146 @@
 .bike {
 	position: relative;
 
-
 	@include flex;
 	// min-height: 600px;
 
-	background: {
-		repeat: no-repeat;
-		size: auto, calc(100% / 3 * 2) 100%;
-	}
-
-	@media (max-width: 1000px) {
-		background: {
-			position: calc(100% / 3 * 2 / 2) 50%, 0 0;
-			size: auto, 50% 100%;
-		}
-	}
-
 	@media (max-width: 720px) {
 		justify-content: center;
-
-		background: {
-			position: center, 0 0;
-			size: auto, cover;
-		}
 	}
 
-	&--right {
-		justify-content: end;
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+
 		background: {
-			position: calc(100% / 3 * 2 / 2) 50%, 0 0;
+			repeat: no-repeat;
+			size: auto, calc(100% / 3 * 2) 100%;
 		}
 
 		@media (max-width: 1000px) {
 			background: {
-				position: 20% 50%, 0 0;
+				position: calc(100% / 3 * 2 / 2) 50%, 0 0;
 				size: auto, 50% 100%;
 			}
 		}
 
 		@media (max-width: 720px) {
-			justify-content: center;
-
 			background: {
-				color: #fff;
 				position: center, 0 0;
 				size: auto, cover;
+			}
+			filter: blur(3px);
+		}
+	}
+
+	&--right {
+		justify-content: end;
+
+		@media (max-width: 720px) {
+			justify-content: center;
+		}
+
+		&::before {
+			background: {
+				position: calc(100% / 3 * 2 / 2) 50%, 0 0;
+			}
+
+			@media (max-width: 1000px) {
+				background: {
+					position: 20% 50%, 0 0;
+					size: auto, 50% 100%;
+				}
+			}
+
+			@media (max-width: 720px) {
+				background: {
+					color: #fff;
+					position: center, 0 0;
+					size: auto, cover;
+				}
 			}
 		}
 	}
 
 	&--left {
-		background: {
-			position: calc(100% / 3 * 2) 50%, top right;
-		}
-
-		@media (max-width: 1000px) {
-			background: {
-				position: 80% 50%, top right;
-			}
-		}
-
 		@media (max-width: 720px) {
 			justify-content: center;
+		}
 
+		&::before {
 			background: {
-				color: #fff;
-				position: center, 0 0;
-				size: auto, cover;
+				position: calc(100% / 3 * 2) 50%, top right;
+			}
+
+			@media (max-width: 1000px) {
+				background: {
+					position: 80% 50%, top right;
+				}
+			}
+
+			@media (max-width: 720px) {
+				background: {
+					color: #fff;
+					position: center, 0 0;
+					size: auto, cover;
+				}
 			}
 		}
 	}
 
 	&--three {
 		justify-content: center;
-		background: {
-			position: calc(100% / 3 / 3) 50%, left top, right top;
-			size: auto, calc(100% / 3) 100%, calc(100% / 3) 100%;
-		}
 
 		@media (max-width: 1000px) {
 			justify-content: right;
-
-			background: {
-				position: calc(100% / 3 / 3) 50%, left top, left bottom;
-				size: auto, 50% 50%, 50% 50%;
-			}
 		}
 
 		@media (max-width: 720px) {
 			justify-content: center;
+		}
 
+		&::before {
 			background: {
-				color: #fff;
-				position: center, left top, left bottom;
-				size: auto, 100% 50%, 100% 50%;
+				position: calc(100% / 3 / 3) 50%, left top, right top;
+				size: auto, calc(100% / 3) 100%, calc(100% / 3) 100%;
+			}
+
+			@media (max-width: 1000px) {
+				background: {
+					position: calc(100% / 3 / 3) 50%, left top, left bottom;
+					size: auto, 50% 50%, 50% 50%;
+				}
+			}
+
+			@media (max-width: 720px) {
+				justify-content: center;
+
+				background: {
+					color: #fff;
+					position: center, left top, left bottom;
+					size: auto, 100% 50%, 100% 50%;
+				}
 			}
 		}
 	}
 
-	&--bg_one {
+	&--bg_one::before {
 		background: {
 			image: url("../img/bike-1/logo.png"), url("../img/bike-1/bike-1.jpg");
 		}
 	}
 
-	&--bg_two {
+	&--bg_two::before {
 		background: {
 			image: url("../img/bike-2/logo.png"), url("../img/bike-2/bike-1.jpg");
 		}
 	}
 
-	&--bg_three {
+	&--bg_three::before {
 		background: {
 			image: url("../img/bike-3/logo.png"), url("../img/bike-3/bike-1.jpg"),
 				url("../img/bike-3/bike-3.jpg");
@@ -119,6 +148,8 @@
 	}
 
 	&__content {
+		position: relative;
+		z-index: 10;
 		@include center_f;
 		flex-direction: column;
 		flex: 0 1 calc(100% / 3);
@@ -193,6 +224,11 @@
 		&:hover {
 			opacity: 1;
 			transition: all 0.3s linear;
+		}
+
+		@media (max-width: 720px) {
+			border-bottom-left-radius: 30px;
+			border-bottom-right-radius: 30px;
 		}
 	}
 
