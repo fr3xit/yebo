@@ -163,20 +163,27 @@
 			flex: 0 1 80%;
 			margin: 10% 0;
 
+			color: $color-black;
 			background: {
 				color: #ffffff95;
 			}
-			border: 1px solid black;
+			border: 1px solid $color-black;
+			box-shadow: 0 0 10px $color-black;
 			border-radius: 30px;
 		}
 	}
 
 	&__desc {
+		position: relative;
+		z-index: 100;
+
 		@include center_f;
 		flex-direction: column;
 		align-content: center;
 		flex: 1 1 calc(100% / 3 * 2);
 		padding: 60px;
+
+		background: linear-gradient(transparent, #fff);
 	}
 
 	&__img-box {

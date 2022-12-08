@@ -39,6 +39,7 @@ img {
   max-width: 1080px;
   margin: 0 auto;
   text-align: center;
+  line-height: 1.8em;
 }
 .desc__icon {
   margin-bottom: 30px;
@@ -59,7 +60,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: 10;
   margin: 0 auto;
   display: block;
   width: 30px;
@@ -240,12 +241,16 @@ img {
     justify-content: center;
     flex: 0 1 80%;
     margin: 10% 0;
+    color: #353738;
     background-color: rgba(255, 255, 255, 0.5843137255);
-    border: 1px solid black;
+    border: 1px solid #353738;
+    box-shadow: 0 0 10px #353738;
     border-radius: 30px;
   }
 }
 .bike__desc {
+  position: relative;
+  z-index: 100;
   display: flex;
   gap: 30px;
   justify-content: space-between;
@@ -256,6 +261,7 @@ img {
   align-content: center;
   flex: 1 1 66.6666666667%;
   padding: 60px;
+  background: linear-gradient(transparent, #fff);
 }
 .bike__img-box {
   flex: 1 1 33.3333333333%;
