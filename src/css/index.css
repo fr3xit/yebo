@@ -105,30 +105,52 @@ img {
   gap: 30px;
   justify-content: space-between;
   background-repeat: no-repeat;
-  background-position: 33.3333333333% 50%, 0 0;
   background-size: auto, 66.6666666667% 100%;
 }
-.bike--left {
-  background-position: right;
+@media (max-width: 1000px) {
+  .bike {
+    background-position: 33.3333333333% 50%, 0 0;
+    background-size: auto, 50% 100%;
+  }
 }
 .bike--right {
   justify-content: end;
+  background-position: 33.3333333333% 50%, 0 0;
+}
+@media (max-width: 1000px) {
+  .bike--right {
+    background-position: 20% 50%, 0 0;
+    background-size: auto, 50% 100%;
+  }
+}
+.bike--left {
+  background-position: 66.6666666667% 50%, top right;
+}
+@media (max-width: 1000px) {
+  .bike--left {
+    background-position: 80% 50%, top right;
+  }
 }
 .bike--three {
   justify-content: center;
+  background-position: 11.1111111111% 50%, left top, right top;
+  background-size: auto, 33.3333333333% 100%, 33.3333333333% 100%;
+}
+@media (max-width: 1000px) {
+  .bike--three {
+    justify-content: right;
+    background-position: 11.1111111111% 50%, left top, left bottom;
+    background-size: auto, 50% 50%, 50% 50%;
+  }
 }
 .bike--bg_one {
   background-image: url("../img/bike-1/logo.png"), url("../img/bike-1/bike-1.jpg");
-  background-position: 33.3333333333% 50%, 0 0;
 }
 .bike--bg_two {
   background-image: url("../img/bike-2/logo.png"), url("../img/bike-2/bike-1.jpg");
-  background-position: 66.6666666667% 50%, top right;
 }
 .bike--bg_three {
   background-image: url("../img/bike-3/logo.png"), url("../img/bike-3/bike-1.jpg"), url("../img/bike-3/bike-3.jpg");
-  background-position: 11.1111111111% 50%, left top, right top;
-  background-size: auto, 33.3333333333% 100%, 33.3333333333% 100%;
 }
 .bike__content {
   display: flex;
@@ -139,6 +161,11 @@ img {
   align-items: center;
   flex-direction: column;
   flex: 0 1 33.3333333333%;
+}
+@media (max-width: 1000px) {
+  .bike__content {
+    flex: 0 1 50%;
+  }
 }
 .bike__desc {
   display: flex;

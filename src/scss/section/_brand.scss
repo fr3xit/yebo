@@ -4,45 +4,75 @@
 
 	background: {
 		repeat: no-repeat;
-		position: calc(100% / 3 * 2 / 2) 50%, 0 0;
 		size: auto, calc(100% / 3 * 2) 100%;
 	}
 
-	&--left {
-		background-position: right;
+	@media (max-width: 1000px) {
+		background: {
+			position: calc(100% / 3 * 2 / 2) 50%, 0 0;
+			size: auto, 50% 100%;
+		}
 	}
 
 	&--right {
 		justify-content: end;
+		background: {
+			position: calc(100% / 3 * 2 / 2) 50%, 0 0;
+		}
+
+		@media (max-width: 1000px) {
+			background: {
+				position: 20% 50%, 0 0;
+				size: auto, 50% 100%;
+			}
+		}
+	}
+
+	&--left {
+		background: {
+			position: calc(100% / 3 * 2) 50%, top right;
+		}
+
+		@media (max-width: 1000px) {
+			background: {
+				position: 80% 50%, top right;
+			}
+		}
 	}
 
 	&--three {
 		justify-content: center;
 		background: {
-			// size: calc(100% / 3) 100%;
-			// position: center;
+			position: calc(100% / 3 / 3) 50%, left top, right top;
+			size: auto, calc(100% / 3) 100%, calc(100% / 3) 100%;
+		}
+
+		@media (max-width: 1000px) {
+			justify-content: right;
+
+			background: {
+				position: calc(100% / 3 / 3) 50%, left top, left bottom;
+				size: auto, 50% 50%, 50% 50%;
+			}
 		}
 	}
 
 	&--bg_one {
 		background: {
 			image: url("../img/bike-1/logo.png"), url("../img/bike-1/bike-1.jpg");
-			position: calc(100% / 3 * 2 / 2) 50%, 0 0;
 		}
 	}
 
 	&--bg_two {
 		background: {
 			image: url("../img/bike-2/logo.png"), url("../img/bike-2/bike-1.jpg");
-			position: calc(100% / 3 * 2) 50%, top right;
 		}
 	}
 
 	&--bg_three {
 		background: {
-			image: url("../img/bike-3/logo.png"), url("../img/bike-3/bike-1.jpg"), url("../img/bike-3/bike-3.jpg");
-			position: calc(100% / 3 / 3) 50%, left top, right top;
-			size: auto, calc(100% / 3) 100%, calc(100% / 3) 100%;
+			image: url("../img/bike-3/logo.png"), url("../img/bike-3/bike-1.jpg"),
+				url("../img/bike-3/bike-3.jpg");
 		}
 	}
 
@@ -50,6 +80,10 @@
 		@include center_f;
 		flex-direction: column;
 		flex: 0 1 calc(100% / 3);
+
+		@media (max-width: 1000px) {
+			flex: 0 1 50%;
+		}
 	}
 
 	&__desc {
