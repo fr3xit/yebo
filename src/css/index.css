@@ -106,6 +106,7 @@ img {
   display: flex;
   gap: 30px;
   justify-content: space-between;
+  min-height: 600px;
 }
 @media (max-width: 720px) {
   .bike {
@@ -242,10 +243,17 @@ img {
     flex: 0 1 80%;
     margin: 10% 0;
     color: #353738;
-    background-color: rgba(255, 255, 255, 0.5843137255);
+    background-color: rgba(215, 215, 215, 0.5843137255);
     border: 1px solid #353738;
     box-shadow: 0 0 10px #353738;
     border-radius: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .bike__content {
+    justify-content: center;
+    flex: 0 1 90%;
+    margin: 5% 0;
   }
 }
 .bike__desc {
@@ -260,8 +268,14 @@ img {
   flex-direction: column;
   align-content: center;
   flex: 1 1 66.6666666667%;
-  padding: 60px;
+  padding: 50px;
+  width: 100%;
   background: linear-gradient(transparent, #fff);
+}
+@media (max-width: 480px) {
+  .bike__desc {
+    padding: 20px;
+  }
 }
 .bike__img-box {
   flex: 1 1 33.3333333333%;
@@ -270,6 +284,7 @@ img {
 .bike__link {
   position: relative;
   display: block;
+  height: 100%;
 }
 .bike__img {
   width: 100%;

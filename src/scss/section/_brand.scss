@@ -2,7 +2,7 @@
 	position: relative;
 
 	@include flex;
-	// min-height: 600px;
+	min-height: 600px;
 
 	@media (max-width: 720px) {
 		justify-content: center;
@@ -165,11 +165,17 @@
 
 			color: $color-black;
 			background: {
-				color: #ffffff95;
+				color: #d7d7d795;
 			}
 			border: 1px solid $color-black;
 			box-shadow: 0 0 10px $color-black;
 			border-radius: 30px;
+		}
+
+		@media (max-width: 480px) {
+			justify-content: center;
+			flex: 0 1 90%;
+			margin: 5% 0;
 		}
 	}
 
@@ -181,9 +187,14 @@
 		flex-direction: column;
 		align-content: center;
 		flex: 1 1 calc(100% / 3 * 2);
-		padding: 60px;
+		padding: 50px;
+		width: 100%;
 
 		background: linear-gradient(transparent, #fff);
+
+		@media (max-width: 480px) {
+			padding: 20px;
+		}
 	}
 
 	&__img-box {
@@ -195,6 +206,7 @@
 		position: relative;
 
 		display: block;
+		height: 100%;
 	}
 
 	&__img {
