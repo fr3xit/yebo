@@ -209,6 +209,30 @@
 		height: 100%;
 	}
 
+	&__img-content {
+		position: relative;
+
+		&:hover {
+
+		}
+	}
+
+	&__img-inner {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+
+		@include center_f;
+	}
+
+	&__img-inner-logo {
+		width: 80px;
+		height: auto;
+	}
+
 	&__img {
 		width: 100%;
 		height: 100%;
@@ -220,39 +244,20 @@
 		}
 	}
 
-	&__img-content {
-		opacity: 0;
-		position: absolute;
-		top: 0;
-		right: 0;
-		left: 0;
-		bottom: 0;
-		z-index: 10;
-
-		@include center_f;
-		flex-direction: column;
-		gap: 5px;
-		min-width: 100%;
-		min-height: 100%;
-		// padding-top: 50px;
-
-		font-size: 1.2em;
-		font-weight: 700;
-		background-color: $color-accent_alpha;
-
-		&:hover {
-			opacity: 1;
-			transition: all 0.3s linear;
-		}
-
+	&__img-showing {
 		@media (max-width: 720px) {
 			border-bottom-left-radius: 30px;
 			border-bottom-right-radius: 30px;
 		}
 	}
-
-	&__img-content-title {
-		color: #fff;
-		opacity: 1;
-	}
 }
+
+// .bike__img-content:hover .bike__img-inner {
+// 	background-color: red;
+// 	display: none;
+// }
+
+// .bike__img-showing:hover .desc__icon {
+// 	background-color: red;
+// 	opacity: 0;
+// }
