@@ -14,12 +14,7 @@
 
 		content: "";
 		background-color: #fff;
-		background-color: $color-accent;
 		transform: translateY(-50%) rotate(135deg);
-
-		&:hover {
-			background-color: $color-accent;
-		}
 	}
 
 	&--line::after {
