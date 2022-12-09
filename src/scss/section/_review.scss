@@ -1,7 +1,4 @@
-.desc {
-	max-width: 1080px;
-	margin: 0 auto;
-
+.review {
 	text-align: center;
 
 	&__icon {
@@ -11,13 +8,19 @@
 	&__title {
 		margin-bottom: 20px;
 
+		color: $color-black;
 		font-size: 1.125em;
 		font-weight: 700;
-		text-transform: uppercase;
-		color: $color-black;
+	}
+
+	&__time {
+		color: $color-grey;
+		font-weight: 400;
 	}
 
 	&__text {
-		text-align: left;
+		margin-bottom: 100px;
+		font-size: 1.5em;
+		font-style: italic;
 	}
 }

@@ -5,12 +5,17 @@
 
 	color: $color-grey;
 	font-family: "Lato", sans-serif;
+	line-height: 1.5em;
 }
 
 .container {
 	max-width: calc($container + 30px);
 	padding: 0 15px;
 	margin: 0 auto;
+
+	&--fullhd {
+		max-width: calc(1080px + 30px);
+	}
 }
 
 img {
