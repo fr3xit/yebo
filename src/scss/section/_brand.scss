@@ -1,5 +1,9 @@
 .brand {
 	margin-bottom: 125px;
+
+	@media (max-width: 500px) {
+		margin-bottom: 50px;
+	}
 }
 .bike {
 	position: relative;

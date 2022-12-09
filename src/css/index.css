@@ -71,7 +71,6 @@ img {
 }
 
 .desc {
-  max-width: 1080px;
   margin: 0 auto;
   text-align: center;
 }
@@ -132,12 +131,22 @@ img {
   padding: 100px 0;
   background-color: #d7d7d7;
 }
+@media (max-width: 500px) {
+  .generation {
+    padding: 50px 0;
+  }
+}
 .generation__text {
   text-align: center;
 }
 
 .brand {
   margin-bottom: 125px;
+}
+@media (max-width: 500px) {
+  .brand {
+    margin-bottom: 50px;
+  }
 }
 
 .bike {
@@ -389,6 +398,11 @@ img {
   margin-bottom: 60px;
   text-align: center;
 }
+@media (max-width: 500px) {
+  .review {
+    margin-bottom: 40px;
+  }
+}
 .review__icon {
   margin-bottom: 30px;
 }
@@ -406,6 +420,11 @@ img {
   margin-bottom: 100px;
   font-size: 1.5em;
   font-style: italic;
+}
+@media (max-width: 720px) {
+  .review__text {
+    margin-bottom: 30px;
+  }
 }
 .dots-box {
   display: flex;
