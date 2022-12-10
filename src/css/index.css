@@ -57,32 +57,6 @@ img {
   text-align: left;
 }
 
-.decor--triangle::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 101;
-  margin: 0 auto;
-  display: block;
-  width: 30px;
-  height: 30px;
-  content: "";
-  background-color: #fff;
-  transform: translateY(-50%) rotate(135deg);
-}
-.decor--line::after {
-  display: block;
-  width: 60px;
-  height: 2px;
-  margin: 50px auto;
-  margin-bottom: 20px;
-  content: "";
-  border-radius: 3px;
-  background-color: #f7f7f7;
-}
-
 .showing {
   position: relative;
   width: 100%;
@@ -346,7 +320,7 @@ img {
     padding: 20px;
   }
 }
-.bike__showing:hover .decor--triangle::after {
+.bike__showing:hover .triangle::after {
   background-color: #64c29e;
   transition: all 0.3s linear;
 }
@@ -390,6 +364,34 @@ img {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
   }
+}
+
+.triangle::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  margin: 0 auto;
+  display: block;
+  width: 30px;
+  height: 30px;
+  content: "";
+  background-color: #fff;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.line::after {
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin: 50px auto;
+  margin-bottom: 20px;
+  content: "";
+  border-radius: 3px;
+  background-color: #64c29e;
+  box-shadow: 0 0 10px #64c29e;
 }
 
 .review {

@@ -206,7 +206,7 @@
 
 	&__showing {
 		&:hover {
-			.decor--triangle::after {
+			.triangle::after {
 				background-color: $color-accent;
 				transition: all 0.3s linear;
 			}
@@ -254,3 +254,37 @@
 		}
 	}
 }
+
+// Decor
+
+.triangle::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 101;
+		margin: 0 auto;
+
+		display: block;
+		width: 30px;
+		height: 30px;
+
+		content: "";
+		background-color: #fff;
+		transform: translateY(-50%) rotate(135deg);
+	}
+
+	.line::after {
+		display: block;
+		width: 60px;
+		height: 2px;
+
+		margin: 50px auto;
+		margin-bottom: 20px;
+
+		content: "";
+		border-radius: 3px;
+		background-color: $color-accent;
+		box-shadow: 0 0 10px $color-accent;
+	}
