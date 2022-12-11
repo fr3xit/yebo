@@ -10,12 +10,42 @@
 		<link href="./src/css/index.css" rel="stylesheet" />
 		<title>YEBO</title>
 	</head>
+
 	<body>
 		<div class="page">
 			<header class="header-aut">
-				<h1 class="h1">Title Header</h1>
-				<div class="header__logo logo">
-					<img class="logo__img" src="./src/img/logo.png" alt="Logo" />
+				<div class="header header--active container">
+					<nav class="header__menu nav-bar">
+						<div class="nav-bar__item">
+							<a class="nav-bar__link" href="./index.html">
+								<span class="nav-bar__item-text">about us</span>
+							</a>
+						</div>
+
+						<div class="nav-bar__item">
+							<a class="nav-bar__link" href="./index.html">
+								<span class="nav-bar__item-text">work</span>
+							</a>
+						</div>
+
+						<div class="header__logo nav-bar__item logo">
+							<a class="logo__link" href="./index.html">
+								<img class="logo__img" src="./src/img/logo.png" alt="Logo" />
+							</a>
+						</div>
+
+						<div class="nav-bar__item">
+							<a class="nav-bar__link" href="./index.html">
+								<span class="nav-bar__item-text">shop</span>
+							</a>
+						</div>
+
+						<div class="nav-bar__item">
+							<a class="nav-bar__link" href="./index.html">
+								<span class="nav-bar__item-text">contact</span>
+							</a>
+						</div>
+					</nav>
 				</div>
 			</header>
 
@@ -446,11 +476,18 @@
 					<div class="container container--small">
 						<div class="subscribe">
 							<div class="subscribe__logo logo">
-								<img class="logo__img" src="./src/img/logo.png" alt="Logo" />
+								<a class="logo__link" href="./index.html">
+									<img class="logo__img" src="./src/img/logo.png" alt="Logo" />
+								</a>
 							</div>
 							<h3 class="subscribe__label">Stay on the saddle!</h3>
 							<form class="subscribe__form" action="#" method="post">
-								<input class="subscribe__input" name="form[]" placeholder="enter your email... " type="email" />
+								<input
+									class="subscribe__input"
+									name="form[]"
+									placeholder="enter your email... "
+									type="email"
+								/>
 								<button class="subscribe__btn">GO</button>
 							</form>
 						</div>
@@ -461,26 +498,44 @@
 			<footer class="footer-aut">
 				<div class="footer container">
 					<div class="footer__address footer__col">
-						<p class="footer__address-title">AOD New York</p>
+						<p class="footer__address-text">AOD New York</p>
 						<p class="footer__address-text">2250 Lexington Avenue</p>
-						<p class="footer__address-text">New York, NY 10035  - info@domain.com</p>
+						<p class="footer__address-text">
+							New York, NY 10035 - info@domain.com
+						</p>
 					</div>
 
 					<div class="footer__social footer__col">
 						<a class="footer__social-link" href="#">
-							<img class="footer__social-icon" src="./src/img/icon/twitter_bg.png" alt="Twitter">
+							<img
+								class="footer__social-icon"
+								src="./src/img/icon/twitter_bg.png"
+								alt="Twitter"
+							/>
 						</a>
 						<a class="footer__social-link" href="#">
-							<img class="footer__social-icon" src="./src/img/icon/facebook.png" alt="Facebook">
+							<img
+								class="footer__social-icon"
+								src="./src/img/icon/facebook.png"
+								alt="Facebook"
+							/>
 						</a>
 						<a class="footer__social-link" href="#">
-							<img class="footer__social-icon" src="./src/img/icon/pinterest.png" alt="Pinterest">
+							<img
+								class="footer__social-icon"
+								src="./src/img/icon/pinterest.png"
+								alt="Pinterest"
+							/>
 						</a>
 					</div>
 
 					<div class="footer__author footer__col">
 						<div class="footer__author-text">Handcrafted by</div>
-						<img class="footer__author-icon" src="./src/img/yebo-logo.png" alt="YEBO">
+						<img
+							class="footer__author-icon"
+							src="./src/img/yebo-logo.png"
+							alt="YEBO"
+						/>
 					</div>
 				</div>
 			</footer>

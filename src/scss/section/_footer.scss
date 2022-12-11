@@ -29,14 +29,17 @@
 		@media (max-width: 720px) {
 			text-align: center;
 		}
-	}
 
-	&__address-title {
-		font-weight: 700;
+
 	}
 
 	&__address-text {
 		font-style: italic;
+
+		&:first-child {
+			font-weight: 700;
+			font-style: normal;
+		}
 	}
 
 	&__social {
