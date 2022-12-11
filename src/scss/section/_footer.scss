@@ -1,0 +1,56 @@
+.footer-aut {
+	background-color: $color-bg;
+}
+
+.footer {
+	@include center_f;
+	justify-content: space-between;
+	min-height: 250px;
+
+	font-size: 1.125em;
+
+	@media (max-width: 720px) {
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+		gap: 30px;
+
+		&__col {
+			@include center_f;
+			width: 100%;
+		}
+	}
+
+	&__address {
+		@include flex;
+		gap: 0;
+		flex-direction: column;
+
+		@media (max-width: 720px) {
+			text-align: center;
+		}
+	}
+
+	&__address-title {
+		font-weight: 700;
+	}
+
+	&__address-text {
+		font-style: italic;
+	}
+
+	&__social {
+		@include center_f;
+		gap: 15px;
+	}
+
+	&__author {
+		@include center_f;
+		gap: 15px;
+	}
+
+	&__author-text {
+		@include center_f;
+		font-style: italic;
+	}
+}
